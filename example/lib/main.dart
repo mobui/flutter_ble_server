@@ -22,14 +22,13 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
   }
 
-  // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
       platformVersion =
-          await FlutterBleServer.platformVersion ?? 'Unknown platform version';
+          await FlutterBleServer.instance.startServer(server)
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

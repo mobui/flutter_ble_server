@@ -1,7 +1,7 @@
 name: flutter_ble_server
 description: Flutter BLE Server (Peripheral)
 version: 0.0.1
-homepage:
+homepage: https://github.com/mobui/flutter_ble_server
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  uuid: ^3.0.4
 
 dev_dependencies:
   flutter_test:

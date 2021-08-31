@@ -1,14 +1,14 @@
 
+library flutter_ble_server;
+
 import 'dart:async';
+import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:flutter/services.dart';
+import 'package:uuid/uuid.dart';
 
-class FlutterBleServer {
-  static const MethodChannel _channel =
-      const MethodChannel('flutter_ble_server');
-
-  static Future<String?> get platformVersion async {
-    final String? version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-}
+part 'src/flutter_ble_server.dart';
+part 'src/flutter_ble_advertiser.dart';
+part 'src/flutter_ble_characteristic.dart';
+part 'src/flutter_ble_service.dart';
